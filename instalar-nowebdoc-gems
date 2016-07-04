@@ -1,0 +1,11 @@
+#! /bin/bash
+rm -fR /usr/local/lib/nowebdoc-gems
+mkdir /usr/local/lib/nowebdoc-gems
+cp ../nowebdoc-gems/dist/nowebdoc-gems.jar /usr/local/lib/nowebdoc-gems
+
+rm -fR /usr/local/lib/nowebdoc-gems/lib
+mkdir /usr/local/lib/nowebdoc-gems/lib
+cp ../nowebdoc-gems/dist/lib/* /usr/local/lib/nowebdoc-gems/lib
+
+cp ./nowebdoc-gems /usr/local/bin
+chmod u+x /usr/local/bin/nowebdoc-gems

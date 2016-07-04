@@ -1,0 +1,17 @@
+T__0=1
+T__1=2
+T__2=3
+T__3=4
+T__4=5
+T__5=6
+TEXTO=7
+DIGITO=8
+LETRA=9
+WS=10
+ErroIsolado=11
+'--config'=1
+'-R'=2
+'-h'=3
+'--help'=4
+'-v'=5
+'--version'=6
