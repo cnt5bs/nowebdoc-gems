@@ -4,7 +4,7 @@ Extracts code fragments from specification files writen with `listing` or `pando
 
 ## Starting points
 
-- [Instalation script][install-nowebdoc-gems]
+ - [Instalation script][install-nowebdoc-gems]
 
 Italo S. Vega
 
