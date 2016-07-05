@@ -1,14 +1,11 @@
 # nowebdoc-gems
 
-Extracts code fragments from specification files writen with `listing` or `pandoc` delimiters. More information in [nowebdoc-gems.pdf][nowebdoc-gems.pdf].
+Extracts code fragments from specification files writen with `listing` or `pandoc` delimiters. More information: [nowebdoc-gems.html](https://github.com/cnt5bs/nowebdoc-gems/blob/master/doc/nowebdoc-gems.pdf).
 
-## Starting points
-
- - [Instalation script][install-nowebdoc-gems]
-
-  [nowebdoc-gems.pdf]: doc/nowebdoc-gems.pdf
-  [install-nowebdoc-gems]: install-nowebdoc-gems
+----
 
 Italo S. Vega
 
-São Paulo, capital, 4 de julho de 2016
+Sao Paulo, SP, Brazil
+
+July 4, 2016
