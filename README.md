@@ -5,7 +5,7 @@ Extracts code fragments from specification files writen with `listing` or `pando
 # Author
 
 (C) 2016 Italo S. Vega (italo@pucsp.br). This software carries no warranty of
-any kind.  (See COPYRIGHT for full copyright and warranty notices.)
+any kind.  (See LICENSE for full license and warranty notices.)
 
 Sao Paulo, SP, Brazil
 
