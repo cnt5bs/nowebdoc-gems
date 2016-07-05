@@ -4,7 +4,7 @@ Extracts code fragments from specification files writen with `listing` or `pando
 
 ----
 
-Italo S. Vega
+*Italo S. Vega*
 
 Sao Paulo, SP, Brazil
 
