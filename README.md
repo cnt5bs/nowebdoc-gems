@@ -1,6 +1,6 @@
 # nowebdoc-gems
 
-Extracts code fragments from specification files writen with `listing` or `pandoc` delimiters. More information: [nowebdoc-gems.html](https://github.com/cnt5bs/nowebdoc-gems/blob/master/doc/nowebdoc-gems.html).
+Extracts code fragments from specification files writen with `listing` or `pandoc` delimiters. More information: [nowebdoc-gems](https://github.com/cnt5bs/nowebdoc-gems/blob/master/doc/nowebdoc-gems.pdf).
 
 ----
 
