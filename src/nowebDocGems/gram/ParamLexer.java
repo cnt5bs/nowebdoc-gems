@@ -1,5 +1,5 @@
-// Generated from NowebDocGems.g4 by ANTLR 4.5.3
-package gram;
+// Generated from Param.g4 by ANTLR 4.5.3
+package nowebDocGems.gram;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class NowebDocGemsLexer extends Lexer {
+public class ParamLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -69,13 +69,13 @@ public class NowebDocGemsLexer extends Lexer {
 	}
 
 
-	public NowebDocGemsLexer(CharStream input) {
+	public ParamLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "NowebDocGems.g4"; }
+	public String getGrammarFileName() { return "Param.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
