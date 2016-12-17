@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.RuleContext;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-public class NowebDocGemsParams extends ParamBaseListener {
+public class Params extends ParamBaseListener {
     
 @Override
 public void exitTrecho(ParamParser.TrechoContext ctx) {
@@ -59,7 +59,7 @@ public void exitErro(ParamParser.ErroContext ctx) {
 }
 
     
-void processar(String[] args, NowebDocGemsSemantic paramRec) {
+void processar(String[] args, Semantic paramRec) {
     this.paramRec = paramRec;
     String linha = "";
     for (String arg : args) {
@@ -74,6 +74,6 @@ void processar(String[] args, NowebDocGemsSemantic paramRec) {
     ParseTreeWalker walker = new ParseTreeWalker();
     walker.walk(this, arvore);
 }
+Semantic paramRec;
 
-    NowebDocGemsSemantic paramRec;
 }

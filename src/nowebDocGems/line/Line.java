@@ -2,7 +2,7 @@
 package nowebDocGems.line;
 
 import java.util.List;
-import nowebDocGems.NowebDocGems;
+import nowebDocGems.Generator;
 
 public abstract class Line {
 
@@ -11,8 +11,11 @@ public abstract class Line {
     }
     String text;
 
-    public abstract List<String> expand(NowebDocGems x);
+    public abstract List<String> expand(Generator x, String indent);
 
+    public void add(Instruction n) {
+        text += n.text;
+    }
 
     @Override
     public String toString() {

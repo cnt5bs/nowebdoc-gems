@@ -2,7 +2,7 @@
 package nowebDocGems.line;
 
 import java.util.List;
-import nowebDocGems.NowebDocGems;
+import nowebDocGems.Generator;
 
 public class Macro extends Line {
 
@@ -11,8 +11,8 @@ public class Macro extends Line {
     }
 
     @Override
-    public List<String> expand(NowebDocGems x) {
-        List<String> subProgram = x.expand(text);
+    public List<String> expand(Generator x, String indent) {
+        List<String> subProgram = x.expand(text, indent);
         return subProgram;
     }
 

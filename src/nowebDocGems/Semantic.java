@@ -17,9 +17,9 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.RuleContext;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-public class NowebDocGemsSemantic extends NowebDocGemsParserBaseListener {
+public class Semantic extends NowebDocGemsParserBaseListener {
 
-    NowebDocGemsSemantic() {
+    Semantic() {
         specificationLst = new ArrayList<>();
     }
     String versao = "nowebdoc-gems (C) 2016, v0.2.2";
@@ -38,6 +38,7 @@ public class NowebDocGemsSemantic extends NowebDocGemsParserBaseListener {
         String macro = ctx.MACROTEXT().getText();
         Macro m = new Macro(macro);
         owner.addMacro(currentKeyName, m);
+        owner.used(macro, currentKeyName);
     }
 
     @Override
@@ -51,20 +52,21 @@ public class NowebDocGemsSemantic extends NowebDocGemsParserBaseListener {
     public void enterMinor(NowebDocGemsParser.MinorContext ctx) {
         String instruction = ctx.MINOR().getText();
         Instruction n = new Instruction(instruction);
-        owner.addInstruction(currentKeyName, n);
+        owner.addSingle(currentKeyName, n);
     }
 
     @Override
     public void enterTil(NowebDocGemsParser.TilContext ctx) {
         String instruction = ctx.TIL().getText();
         Instruction n = new Instruction(instruction);
-        owner.addInstruction(currentKeyName, n);
+        owner.addSingle(currentKeyName, n);
     }
 
     @Override
     public void exitKeyName(NowebDocGemsParser.KeyNameContext ctx) {
         currentKeyName = ctx.MACROTEXT().getText();
         owner.createCodeFrag(currentKeyName);
+        owner.dic(currentKeyName, currentSpecification);
     }
     String currentKeyName;
 
@@ -79,6 +81,7 @@ public class NowebDocGemsSemantic extends NowebDocGemsParserBaseListener {
                 } catch (IOException ex) {
 
                 }
+                currentSpecification = specification;
                 NowebDocGemsLexer lexer = new NowebDocGemsLexer(input);
                 CommonTokenStream tokens = new CommonTokenStream(lexer);
                 NowebDocGemsParser parser = new NowebDocGemsParser(tokens);
@@ -97,10 +100,12 @@ public class NowebDocGemsSemantic extends NowebDocGemsParserBaseListener {
             }
         }
     }
+    String currentSpecification;
 
-    void owner(NowebDocGems aThis) {
+
+    void owner(Generator aThis) {
         owner = aThis;
     }
-    NowebDocGems owner;
+    Generator owner;
 }
 
